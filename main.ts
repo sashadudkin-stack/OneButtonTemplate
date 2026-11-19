@@ -3,14 +3,30 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     Blast.setPosition(90, 60)
     info.changeLifeBy(1)
     sprites.destroy(Filth)
+    info.changeScoreBy(1)
+    animation.runImageAnimation(
+    Blast,
+    assets.animation`Blast Move`,
+    200,
+    true
+    )
+    pause(2500)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
+    let mySprite: Sprite = null
     sprites.destroy(Filth)
     info.changeLifeBy(-1)
+    animation.runImageAnimation(
+    mySprite,
+    assets.animation`Blast projectile`,
+    100,
+    false
+    )
 })
 let Filth: Sprite = null
 let Blast: Sprite = null
-scene.setBackgroundColor(0)
+info.startCountdown(20)
+info.setLife(1)
 scene.setBackgroundImage(assets.image`BackGround`)
 let V1 = sprites.create(assets.image`Player`, SpriteKind.Player)
 controller.moveSprite(V1)
