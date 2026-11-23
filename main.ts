@@ -1,27 +1,25 @@
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     Blast = sprites.create(assets.image`Blast`, SpriteKind.Projectile)
-    Blast.setPosition(90, 60)
+    Blast.setPosition(90, 55)
     info.changeLifeBy(1)
     sprites.destroy(Filth)
     info.changeScoreBy(1)
+    pause(2400)
     animation.runImageAnimation(
     Blast,
-    assets.animation`Blast Move`,
-    200,
+    assets.animation`blast sprite`,
+    100,
     true
     )
-    pause(2500)
+    music.play(music.createSoundEffect(WaveShape.Square, 5000, 5000, 255, 255, 500, SoundExpressionEffect.None, InterpolationCurve.Linear), music.PlaybackMode.UntilDone)
+})
+info.onCountdownEnd(function () {
+    game.gameOver(true)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
-    let mySprite: Sprite = null
     sprites.destroy(Filth)
     info.changeLifeBy(-1)
-    animation.runImageAnimation(
-    mySprite,
-    assets.animation`Blast projectile`,
-    100,
-    false
-    )
+    music.play(music.createSoundEffect(WaveShape.Noise, 5000, 0, 255, 0, 500, SoundExpressionEffect.None, InterpolationCurve.Linear), music.PlaybackMode.UntilDone)
 })
 let Filth: Sprite = null
 let Blast: Sprite = null

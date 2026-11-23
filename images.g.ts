@@ -136,9 +136,9 @@ eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 . . . . 5 f 8 8 8 f 5 . . . . . 
 . . . . f 8 8 8 8 8 f . . . . . 
 . . . . f 8 5 8 5 8 f . . . . . 
-. . . . f . 8 8 8 . f . . . . . 
-. . . . f 5 . f . 5 f . . . . . 
 . . . . 8 . 8 8 8 . 8 . . . . . 
+. . . . 8 5 . f . 5 8 . . . . . 
+. . . . 5 . 8 8 8 . 5 . . . . . 
 . . . . . . f 8 f . . . . . . . 
 . . . . . . f . f . . . . . . . 
 . . . . . . f . f . . . . . . . 
@@ -173,7 +173,7 @@ eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
-. . . . . 1 1 1 1 9 9 9 9 . . . 
+. . . . . . . . . . . . . . . . 
 . . . . . . 1 1 1 1 9 9 9 9 . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
@@ -261,7 +261,7 @@ eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 . . . . . . . . 6 . . . . . . . 
 . . . . . . . . 6 . . . . . . . 
 `];
-            case "Blast Move":
+            case "blast sprite":
             case "anim4":return [img`
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
@@ -270,8 +270,8 @@ eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
-. . . . . d d d d 9 9 9 9 . . . 
-. . . . . . d d d d 9 9 9 9 . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . 1 1 1 1 9 9 9 9 . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
@@ -287,8 +287,8 @@ eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
-. . . . . d d d d 9 9 9 9 9 . . 
-. . . . . d d d d 9 9 9 9 9 . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . e e e e e e e e . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
@@ -304,25 +304,8 @@ eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
-. . . . . . d d d d 9 9 9 9 . . 
-. . . . . d d d d 9 9 9 9 . . . 
 . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-`, img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . d d d d 9 9 9 9 9 . . 
-. . . . . d d d d 9 9 9 9 9 . . 
+. . . . . . e e e e e e e e . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
@@ -358,8 +341,8 @@ eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 . . . . 5 . 8 8 8 f 5 . . . . . 
 . . . . . 8 8 8 8 8 f . . . . . 
 . . . . . 8 5 8 5 8 f . . . . . 
-. . . . . . 8 8 8 . . 8 f 9 . . 
-. . . . . 5 . f . 5 . . 8 . f . 
+. . . . . . 8 8 8 . e 8 f 9 . . 
+. . . . . 5 . f . 5 e . 8 . f . 
 . . . . 5 . . . . . 5 . . . . f 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
@@ -375,8 +358,8 @@ eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 . . . . 5 . 8 8 8 f 5 . . . . . 
 . . . . . 8 8 8 8 8 f . f 9 f f 
 . . . . . 8 5 8 5 8 f . f . . . 
-. . . . . . 8 8 8 . . 8 8 . . . 
-. . . . . 5 . f . 5 . . . . . . 
+. . . . . . 8 8 8 . e 8 8 . . . 
+. . . . . 5 . f . 5 e . . . . . 
 . . . . 5 . . . . . 5 . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
@@ -392,8 +375,8 @@ eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 . . . . 5 . 8 8 8 f 5 . . . . . 
 . . . . . 8 8 8 8 8 f . . . . . 
 . . . . . 8 5 8 5 8 f . . . . . 
-. . . . . . 8 8 8 . . 8 f 9 . . 
-. . . . . 5 . f . 5 . . 8 . f . 
+. . . . . . 8 8 8 . e 8 f 9 . . 
+. . . . . 5 . f . 5 e . 8 . f . 
 . . . . 5 . . . . . 5 . . . . f 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 

@@ -3,7 +3,8 @@
     "description": "",
     "dependencies": {
         "device": "*",
-        "arcade-background-scroll": "github:microsoft/arcade-background-scroll#v0.1.4"
+        "arcade-background-scroll": "github:microsoft/arcade-background-scroll#v0.1.4",
+        "arcade-piano-roll": "github:microsoft/arcade-piano-roll#v0.0.1"
     },
     "files": [
         "main.blocks",
